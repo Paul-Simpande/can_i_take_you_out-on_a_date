@@ -1,0 +1,147 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff0f5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #444;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: #d63384;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  margin: 2rem 0;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e0559e;
+  transform: scale(1.05);
+}
+
+#popup {
+  display: none;
+  background-color: white;
+  border: 2px solid #ffc0cb;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 300px;
+  margin: 2rem auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-section,
+#followup,
+#datetime,
+#submit-section,
+#confetti, #no {
+  display: none;
+  margin: 1.5rem auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+input,
+select,textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+input,
+select,textarea {
+  /* Visual Design */
+  padding: 12px 20px;
+  border: 2px solid #ffafcc;       /* Romantic pink */
+  border-radius: 25px;             /* Soft rounded edges */
+  background: #fff0f3;             /* Subtle blush background */
+  font-style: italic;
+  
+  /* Typography */
+  color: #a4133c;                  /* Deep rose text */
+  font-size: 1.1rem;
+  
+  /* Interaction Effects */
+  transition: all 0.3s;
+}
+
+input:focus,textarea:focus,select:focus {
+  outline: none;
+  box-shadow: 0 0 8px #ffafcc;     /* Glow effect on focus */
+  border-color: #ff7096;           /* Brighter pink when active */
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+  color: #cd6799;                  /* Coordinated placeholder color */
+  opacity: 0.8;                    /* Subtle transparency */
+}
+
+#confetti, #no {
+  text-align: center;
+  color: #ff69b4;
+  font-size: 1.5rem;
+  animation: popin 0.5s ease-in-out;
+}
+
+@keyframes popin {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    padding: 0 1rem;
+  }
+
+  button {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  #form-section,
+  #followup,
+  #datetime,
+  #submit-section {
+    width: 90%;
+  }
+}

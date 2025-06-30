@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date with Emmy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="landing">
+    <h1>HEY EMMY</h1>
+    <h2>Can I take you out on a date?</h2>
+    <div class="buttons">
+      <button id="yesBtn">Absolutely!</button>
+      <button id="noBtn">Not sure...</button>
+    </div>
+  </div>
+
+  <div id="popup">
+    <p>Are you certain? 🥺</p>
+    <button onclick="sendEmail('no')">I'm sure</button>
+    <button onclick="document.getElementById('popup').style.display='none'">Maybe yes?</button>
+  </div>
+
+  <div id="form-section">
+    <label for="dateType">Pick a Date Type</label>
+    <select id="dateType">
+      <option value="">-- Choose --</option>
+      <option value="Dinner">Dinner</option>
+      <option value="Movie">Movie</option>
+      <option value="Sleep_Over">Sleep Over</option>
+      <option value="Cooking">Cooking</option>
+      <option value="Pinic">Picnic</option>
+    </select>
+  </div>
+
+  <div id="followup"></div>
+
+  <div id="datetime">
+    <label for="date">Pick a Date</label>
+    <input type="date" id="date" min="2025-06-26">
+    <label for="time">Pick a Time</label>
+    <input type="time" id="time">
+  </div>
+
+  <div id="submit-section">
+    <button onclick="submitPlan()">All Set!</button>
+  </div>
+
+  <div id="confetti">
+    <p class="confetti-text">🎉 Woohoo! Date planned! 🎉</p>
+  </div>
+  <div id="no">
+    <p class="confetti-text">😔 That is sad 😔</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "8HKypWeN1u5yJKqPt",
+        });
+    })();
+  </script>
+</body>
+</html>
